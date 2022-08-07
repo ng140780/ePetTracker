@@ -93,7 +93,7 @@
                             </tbody>
                             <!--THIS IS WALKING TABLE==================-->
                         </table>
-                        <button class="btn bgBlue " data-bs-toggle="modal" data-bs-target="#newWalkSchedulePopup">Add</button>
+                        <button class="btn bgBlue " data-bs-toggle="modal" value="<%=pets.pet_id %>" id="addWalkSchedule" data-bs-target="#newWalkSchedulePopup">Add</button>
                         <table class="table table-striped">
                             <!--THIS IS WALKING TABLE==================-->
                             <!--                            <div class="tableFeed">-->
@@ -218,7 +218,6 @@
                                 <label class="form-check-label" for="pet_id">
                                     Pet ID
                                 </label>
-
                                 <select class="form-check-label" name="add_walk" id="pet_id">
                                     <% walks.forEach(function(walks){%>
                                     <!--NEED TO CHECK PET ID AGAIN, DROP DOWN LIST SHOULD SHOW 1 ITEM FOR SAME ID========================  -->
@@ -396,6 +395,12 @@
             }
             tableCreate();
             //CREATE TABLE FOR ACCORDION=====================================        
+
+
+            //GET VALUE FROM WALK SCHEDULE============================
+            var mypet_id = document.getElementById("addWalkSchedule").value;
+            console.log(mypet_id);
+            //GET VALUE FROM WALK SCHEDULE============================
 
     </script>
 </body>
